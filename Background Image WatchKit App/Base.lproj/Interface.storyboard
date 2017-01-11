@@ -1,14 +1,40 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Background_Image_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="0.90000000000000002" alignment="left" backgroundImage="dial0" id="04C-Vt-A7Y">
+                            <items>
+                                <group width="1" height="1" alignment="left" layout="vertical" id="tQo-PA-KIN">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="21%" id="6Ao-1O-opu">
+                                            <fontDescription key="font" type="system" weight="medium" pointSize="24"/>
+                                        </label>
+                                        <label alignment="center" verticalAlignment="center" text="2127 steps" textAlignment="center" id="gJr-nY-z8D">
+                                            <fontDescription key="font" type="system" weight="light" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="dialDisplay" destination="04C-Vt-A7Y" id="nvd-5a-JR4"/>
+                        <outlet property="numberLabel" destination="gJr-nY-z8D" id="oux-Xy-50p"/>
+                        <outlet property="percentLabel" destination="6Ao-1O-opu" id="Nb6-Xl-t8a"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -31,7 +57,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Background_Image_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>

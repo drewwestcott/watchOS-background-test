@@ -12,6 +12,10 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+	@IBOutlet var dialDisplay: WKInterfaceGroup!
+	@IBOutlet var percentLabel: WKInterfaceLabel!
+	@IBOutlet var numberLabel: WKInterfaceLabel!
+	
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -21,6 +25,9 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+		dialDisplay.setBackgroundImageNamed("dial")
+		
+		dialDisplay.startAnimatingWithImages(in: NSRange(location: 0, length: 14), duration: 0.3, repeatCount: 1)
     }
     
     override func didDeactivate() {
